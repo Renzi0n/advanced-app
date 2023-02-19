@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      // Место куда происходит сборка(но мы собираем с помощью вебпака)
+      "outDir": "./dist/",
+      // Выводит места где неявно указан any, но он не запрещает его использование, а лишь заставляет его явно указать
+      "noImplicitAny": true,
+      // Модульная система
+      "module": "ESNext",
+      // В какую спецификацию ecma script компилируем, для поддержки большинства браузеров
+      "target": "es5",
+      "jsx": "react-jsx",
+      // дает обрабатывать не только ts, но и js файлы
+      "allowJs": true,
+      "moduleResolution": "node",
+      // esModuleInterop позволяет работать с пакетами, которые используют common js, как с обычными пакетами с помощью import
+      "esModuleInterop": true,
+      // Если какая-то библиотека не имеет дефолтных импортов, лоадеры вроде ts-loader или babel-loader автоматически создают их
+      // вместо импорта import * as React from 'react'
+      // можно писать import React from 'react'
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "."
+    },
+    "ts-node": {
+        "compilerOptions": {
+          "module": "CommonJS"
+        }
+    }
+}
