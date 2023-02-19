@@ -18,7 +18,10 @@
       // вместо импорта import * as React from 'react'
       // можно писать import React from 'react'
       "allowSyntheticDefaultImports": true,
-      "baseUrl": "."
+      "baseUrl": ".",
+      "paths": {
+        "*": ["./src/*"]
+      }
     },
     "ts-node": {
         "compilerOptions": {
