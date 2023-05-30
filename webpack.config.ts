@@ -11,7 +11,7 @@ export default (env: BuildEnv) => {
     src: path.resolve(__dirname, 'src')
   }
   const mode = env.mode || 'development';
-  const PORT = env.port || 3000;
+  const port = env.port || 3000;
   
   const isDev = mode === 'development';
 
@@ -19,7 +19,7 @@ export default (env: BuildEnv) => {
     mode,
     paths,
     isDev,
-    port: PORT
+    port,
   })
 
   return config;
